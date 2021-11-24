@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://main_menu/main_menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://level_menu/level_menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://rank/rank.tscn" type="PackedScene" id=3]
+[ext_resource path="res://about/about.tscn" type="PackedScene" id=4]
+[ext_resource path="res://board/board.tscn" type="PackedScene" id=5]
+[ext_resource path="res://names_menu/names_menu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://name_menu/name_menu.tscn" type="PackedScene" id=7]
+
+[sub_resource type="GDScript" id=1]
+
+[node name="App" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="main_menu" parent="." instance=ExtResource( 1 )]
+
+[node name="level_menu" parent="." instance=ExtResource( 2 )]
+
+[node name="name_menu" parent="." instance=ExtResource( 7 )]
+
+[node name="names_menu" parent="." instance=ExtResource( 6 )]
+
+[node name="rank" parent="." instance=ExtResource( 3 )]
+
+[node name="settings" parent="." instance=ExtResource( 4 )]
+
+[node name="board" parent="." instance=ExtResource( 5 )]

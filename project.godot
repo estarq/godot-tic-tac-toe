@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Tic Tac Toe"
+run/main_scene="res://main_menu/main_menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+g="*res://global.gd"
+
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=900
+window/size/height=950
+window/size/resizable=false
+window/dpi/allow_hidpi=true
+window/handheld/orientation="sensor"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[global]
+
+splash=false
+splashas=false
+resiz=false
+resize=false
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.301961, 0.301961, 0.301961, 1 )
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false
