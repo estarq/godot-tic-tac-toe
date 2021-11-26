@@ -1,8 +1,8 @@
 # Tic Tac Toe
-
 ![tic-tac-toe](https://github.com/estarq/godot-tic-tac-toe/blob/main/ui.png)
 <br>
-Cross-platform Tic Tac Toe game made with Godot 3.4 & GDScript<br>
+Cross-platform Tic Tac Toe game made with Godot 3.4 & GDScript.<br>
+You can [play in a browser](https://estarq.github.io/godot-tic-tac-toe/) or [download the game](https://github.com/estarq/godot-tic-tac-toe/releases) and play offline.<br>
 Works well on Linux, Mac, and Android.<br>
 Windows:
 * Full-screen mode required
