@@ -3,7 +3,7 @@
 <br>
 Cross-platform Tic Tac Toe game made with Godot 3.4 & GDScript.<br>
 You can [play in a browser](https://estarq.github.io/godot-tic-tac-toe/) or [download the game](https://github.com/estarq/godot-tic-tac-toe/releases) and play offline.<br>
-Works well on Linux, Mac, and Android.<br>
+Works well on Linux (execute permission required), Mac, and Android.<br>
 Windows:
 * Full-screen mode required
 * On older hardware use GLES2 version (maps to OpenGL 2.1 instead of OpenGL 3.3)
