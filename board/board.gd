@@ -105,6 +105,23 @@ func _on_field_pressed(field):
 		_on_field_pressed(get_node(str(field_no)))
 		return
 
+        # Put a 3rd mark in a row
+        for fields in WINNING_COMBINATIONS:
+                var with_x = []
+                var with_o = []
+                var free = []
+                for field in fields:
+                        if field in fields_with_x:
+                                with_x.append(field)
+                        elif field in fields_with_o:
+                                with_o.append(field)
+                        else:
+                                free.append(field)
+                if len(with_o) == 2 and not with_x:
+                        clicking_suspended = false
+                        _on_field_pressed(get_node(str(free[0])))
+                        return
+
 	if g.level == "hard":
 		# Block if the opponent has two in a row
 		for fields in WINNING_COMBINATIONS:
@@ -123,7 +140,7 @@ func _on_field_pressed(field):
 				_on_field_pressed(get_node(str(free[0])))
 				return
 	
-	# Put a 3rd/2nd mark in a row
+	# Put a 2nd mark in a row
 	for fields in WINNING_COMBINATIONS:
 		var with_x = []
 		var with_o = []
@@ -135,11 +152,7 @@ func _on_field_pressed(field):
 				with_o.append(field)
 			else:
 				free.append(field)
-		if len(with_o) == 2 and not with_x:
-			clicking_suspended = false
-			_on_field_pressed(get_node(str(free[0])))
-			return
-		elif len(with_o) == 1 and not with_x:
+		if len(with_o) == 1 and not with_x:
 			clicking_suspended = false
 			_on_field_pressed(get_node(str(free[randi() % free.size()])))
 			return
